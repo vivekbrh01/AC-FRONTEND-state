@@ -1,26 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Sidebar from './sidebar'
+import Accordian from './accordian'
+import Counter from './counter'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+export default class App extends React.Component {
+  state = {
+    activeTab: 'counter',
+  }
+  showComponent = activeTab => {
+    switch (activeTab) {
+      case 'counter':
+        return <Counter />
+      case 'accordian':
+        return <Accordian />
+      case 'sidebar':
+        return <Sidebar />
+
+      default:
+        return <h1>Nothing to show</h1>
+    }
+  }
+  render() {
+    return (
+      <>
+        <button
+          className={
+            this.state.activeTab === 'counter'
+              ? 'active'
+              : ''
+          }
+          onClick={() =>
+            this.setState({activeTab: 'counter'})
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          Counter
+        </button>
+        <button
+          className={
+            this.state.activeTab === 'sidebar'
+              ? 'active'
+              : ''
+          }
+          onClick={() =>
+            this.setState({activeTab: 'sidebar'})
+          }
+        >
+          Sidebar
+        </button>
+        <button
+          className={
+            this.state.activeTab === 'accordian'
+              ? 'active'
+              : ''
+          }
+          onClick={() =>
+            this.setState({activeTab: 'accordian'})
+          }
+        >
+          Accordian
+        </button>
+        <div>
+          {this.showComponent(this.state.activeTab)}
+        </div>
+      </>
+    )
+  }
 }
-
-export default App;
