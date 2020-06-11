@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
     if (this.state.isVisible) {
       return (
-        <div>
+        <div className="hideSidebar">
           <Heading />
           <Menu />
           <button onClick={this.hideSidebar}>Hide</button>
@@ -33,7 +33,7 @@ class App extends React.Component {
       )
     } else {
       return (
-        <div>
+        <div className="hideSidebar">
           <Heading />
           <button onClick={this.showSidebar}>Show</button>
         </div>

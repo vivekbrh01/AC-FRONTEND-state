@@ -27,19 +27,17 @@ import React from 'react'
 function Menu() {
   return (
     <>
-      <div className="sidebarLeft">
-        <nav className="menu">
+      <nav className="menu">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
           <li>
-            <a href="#">Home</a>
+            <a href="#">About</a>
           </li>
-          <li>
-            <a href="#">Contact</a>
-            <li>
-              <a href="#">About</a>
-            </li>
-          </li>
-        </nav>
-      </div>
+        </li>
+      </nav>
     </>
   )
 }

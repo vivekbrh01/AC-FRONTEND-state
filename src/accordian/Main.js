@@ -29,7 +29,7 @@ class App extends React.Component {
           <button onClick={this.handleHide}>
             Show Less
           </button>
-
+          <hr></hr>
           <Accordian
             title="React"
             text="ReactJS is an open-source JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
@@ -37,6 +37,7 @@ class App extends React.Component {
           <button onClick={this.handleHide}>
             Show Less
           </button>
+          <hr></hr>
           <Accordian
             title="Node"
             text="Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser."
@@ -44,6 +45,7 @@ class App extends React.Component {
           <button onClick={this.handleHide}>
             Show Less
           </button>
+          <hr></hr>
         </div>
       )
     } else {
@@ -53,15 +55,17 @@ class App extends React.Component {
           <button onClick={this.handleShow}>
             Read More
           </button>
+          <hr></hr>
           <Accordian title="React" />
           <button onClick={this.handleShow}>
             Read More
           </button>
-
+          <hr></hr>
           <Accordian title="Node" />
           <button onClick={this.handleShow}>
             Read More
           </button>
+          <hr></hr>
         </div>
       )
     }

@@ -22,7 +22,6 @@ class Counter extends React.Component {
         }
       } else if (state.count > 11) {
         return {
-          count: state.count + 100,
           // Window.alert("You can't increase the value above 12")
         }
       }
