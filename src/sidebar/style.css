@@ -1,0 +1,28 @@
+body {
+  line-height: 1.5;
+  background-color: #afafaf;
+}
+* {
+  list-style: none;
+  outline: none;
+}
+.primaryHeading {
+  color: teal;
+}
+strong {
+  color: rgb(4, 68, 68);
+}
+
+a,
+a::before,
+a::after {
+  color: teal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 32px;
+
+}
